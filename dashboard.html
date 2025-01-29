@@ -7,100 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .zen-dots-regular {
-            font-family: "Zen Dots", serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-        body {
-            background-color: black;
-            margin-top: 2px;
-            padding: 0; 
-        }
-        .alert_container {
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            width: 18%;
-        }
-        .alert {
-            padding: 10px;
-            background-color: black;
-            color: green;
-            border: 2px solid green;
-            top: 0px;
-            right: 0px;
-            margin: 4px;
-        }
-        alert_message {
-            padding: 0px;
-            margin: 0px;
-        }
-        .closebtn {
-            margin-left: 15px;
-            color: green;
-            font-weight: bold;
-            float: right;
-            font-size: 22px;
-            line-height: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-        }
-        .column {
-            font-family: "Zen Dots";
-            color: green;
-            background-color: black;
-            border: 2px solid green;
-            font-weight: normal;
-            padding-left: 0px;
-            margin: 20px;
-            width: calc(50% - 40px);
-            box-sizing: border-box;
-            text-align: left;
-            font-size: 20px;
-            box-shadow: 0 0 30px green;
-        }
-        .column_title {
-            font-family: "Zen Dots";
-            font-size: 35px;
-            color: green;
-            background-color: black;
-            border: 2px solid green;
-            padding-top: 2px;
-            padding-bottom: 8px;
-            margin: -2px;
-            font-weight: bold;
-            text-align: center;
-            width: 100%;
-            height: 35px;
-        }
-        .column_text {
-            padding: 8px;
-        }
-        .title {
-            font-size: 10px;
-            color: green;
-            background: black;
-            border: 0px solid green;
-            font-weight: bold;
-            white-space: pre;
-            font-family: monospace;
-            line-height: .55;
-            padding: 0;
-            margin: 0;            
-        }
-        #test {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -137,25 +44,6 @@
             <p id="test"> THE AWESOME DESCRIPTIVE TEXT THAT NEEDS TO BE LONG ENOUGH TO WRAP</p>
         </div>
     </div>
-    <script>
-        const hour = new Date().getHours();
-        const x = 13;
-        let greeting;
-            if (0 < hour && hour < 12) {
-                greeting = "Good Morning";
-            } else if (12 <= hour && hour <= 17) {
-                greeting = "Good Afternooon!";
-            } else {
-                greeting = "Good Evening!";
-            }
-            document.getElementById("greeting").innerHTML = greeting;
-/*
-            const alert_div = document.createElement("div");
-            alert_div.setAttribute("class", "alert");
-
-            const alert_container = document.getElementById("alerts");
-            alert_container.appendChild(alert_div);
-*/
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
