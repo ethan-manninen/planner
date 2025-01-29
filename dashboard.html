@@ -126,16 +126,36 @@
         </div>
     </div>
 
-    <div class="alert_container">
+    <div class="alert_container" id="alerts">
         <div class="alert">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-            <p class="alert_message">Good Morning!</p>
+            <p class="alert_message" id="greeting">blank</p>
         </div>
         <div class="alert">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
             <p class="alert_message" style="cursor: pointer;" onclick="getElementById('test').style.display='inline';""> Big News Story!</p>
-            <p id="test"> THE AWESOME DESCRIPTIVE TEXT</p>
+            <p id="test"> THE AWESOME DESCRIPTIVE TEXT THAT NEEDS TO BE LONG ENOUGH TO WRAP</p>
         </div>
     </div>
+    <script>
+        const hour = new Date().getHours();
+        const x = 13;
+        let greeting;
+            if (0 < hour && hour < 12) {
+                greeting = "Good Morning";
+            } else if (12 <= hour && hour <= 17) {
+                greeting = "Good Afternooon!";
+            } else {
+                greeting = "Good Evening!";
+            }
+            document.getElementById("greeting").innerHTML = greeting;
+/*
+            const alert_div = document.createElement("div");
+            alert_div.setAttribute("class", "alert");
+
+            const alert_container = document.getElementById("alerts");
+            alert_container.appendChild(alert_div);
+*/
+    </script>
 </body>
 </html>
