@@ -21,4 +21,6 @@ fetch('http://localhost:1337')
   .then(response => response.json())
   .then(data => {
     console.log(data); // { message: 'Hello from Python!' }
-  });
+});
+
+document.getElementById("alert_description").innerHTML = "THE AWESOME DESCRIPTIVE TEXT THAT NEEDS TO BE LONG ENOUGH TO WRAP AND IS ALSO UPDATED FROM JS";

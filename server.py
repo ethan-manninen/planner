@@ -4,14 +4,16 @@ import json
 import config
 from newsapi import NewsApiClient
 
-PORT = 1337
+PORT = 1337 
+
+data = {'message': 'Hello from Python!'}
 
 class MyHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
         self.end_headers()
-        data = {'message': 'Hello from Python!'}
+        
         self.wfile.write(json.dumps(data).encode())
 
 with socketserver.TCPServer(("", PORT), MyHandler) as httpd:

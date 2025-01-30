@@ -5,8 +5,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">cd pla
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Super Planner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,8 +41,12 @@
         </div>
         <div class="alert">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-            <p class="alert_message" style="cursor: pointer;" onclick="getElementById('test').style.display='inline';""> Big News Story!</p>
-            <p id="test"> THE AWESOME DESCRIPTIVE TEXT THAT NEEDS TO BE LONG ENOUGH TO WRAP</p>
+            <p class="alert_message" style="cursor: pointer;" onclick="getElementById('alert_description').style.display='inline';"">Big News Story!</p>
+            <p id="alert_description"> THE AWESOME DESCRIPTIVE TEXT THAT NEEDS TO BE LONG ENOUGH TO WRAP</p>
+        </div>
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <p class="alert_message" style="cursor: pointer;"><a class="link" href="news.html">View more top stories</a></p>
         </div>
     </div>
     <script src="main.js"></script>
