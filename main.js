@@ -16,11 +16,20 @@ let greeting;
     const alert_container = document.getElementById("alerts");
     alert_container.appendChild(alert_div);
 */
-
-fetch('http://localhost:1337')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data); // { message: 'Hello from Python!' }
-});
+async function getData() {
+    const url = "http://localhost:1337/data.json";
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+  
+      const json = await response.json();
+      console.log(json);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+  
 
 document.getElementById("alert_description").innerHTML = "THE AWESOME DESCRIPTIVE TEXT THAT NEEDS TO BE LONG ENOUGH TO WRAP AND IS ALSO UPDATED FROM JS";

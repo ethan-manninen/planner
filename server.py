@@ -1,4 +1,5 @@
 import http.server
+from http.server import HTTPServer, SimpleHTTPRequestHandler, test
 import socketserver
 import json
 import config
@@ -10,15 +11,16 @@ newsapi = NewsApiClient(api_key=config.API_KEY)
 
 data = newsapi.get_top_headlines(category='technology',language='en')
 
-class MyHandler(http.server.SimpleHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('Content-type', 'application/json','Access-Control-Allow-Origin: *')
-        self.end_headers()
-        self.wfile.write(json.dumps(data).encode())
+with open("data.json", "w") as file:
+    file.write(json.dumps(data))
 
-with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
-    print("serving at port", PORT)
-    httpd.serve_forever()
 
-# Im not sure if I like this implamentation, copyed from google ai websearch thing...
+class CORSRequestHandler (SimpleHTTPRequestHandler):
+    def end_headers (self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+
+        SimpleHTTPRequestHandler.end_headers(self)
+
+
+if __name__ == '__main__':
+    test(CORSRequestHandler, HTTPServer, port=PORT)
