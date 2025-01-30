@@ -1,6 +1,8 @@
 import http.server
 import socketserver
 import json
+import config
+from newsapi import NewsApiClient
 
 PORT = 1337
 
