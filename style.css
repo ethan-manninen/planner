@@ -93,3 +93,40 @@ alert_message {
 .link {
     color: green;
 }
+.news_container {
+    margin: auto;
+    justify-content: center;
+}
+.news_box {
+    font-family: "Zen Dots";
+    color: green;
+    background-color: black;
+    border: 2px solid green;
+    font-weight: normal;
+    margin: 20px;
+    width: 60%;
+    min-width: 900px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 20px;
+    box-shadow: 0 0 20px green;
+}
+.news_container2 {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.news_text {
+    margin: 10px;
+}
+.title_container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
