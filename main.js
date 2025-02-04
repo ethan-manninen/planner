@@ -30,6 +30,22 @@ async function getData() {
       console.error(error.message);
     }
   }
+/*
+async function getXArtical(x) {
+  const url = "http://localhost:1337/data.json";
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
   
+      const json = await response.json();
+      const parsed = JSON.parse(json)
+      return parsed[x];
+    } catch (error) {
+      console.error(error.message);
+    }
+}
+*/
 
 document.getElementById("alert_description").innerHTML = "THE AWESOME DESCRIPTIVE TEXT THAT NEEDS TO BE LONG ENOUGH TO WRAP AND IS ALSO UPDATED FROM JS";
